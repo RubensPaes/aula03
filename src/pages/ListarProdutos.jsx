@@ -1,3 +1,5 @@
+
+import styles from "../styles/ListarProdutos.module.css"
 export default function ListarProdutos({ id, title, description, price, image }) {
     return (
         <div>
