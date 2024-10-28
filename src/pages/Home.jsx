@@ -21,16 +21,7 @@ export default function Home() {
         <>
             <h1>Listao de produtos</h1>
        
-                {lista.map(produto =>
-                   <ListarProdutos
-                   key={produto.id}
-                   imagem={produto.image}
-                   titulo={produto.title}
-                   preco={produto.price}
-                   descricao={produto.description}
-                   />        
-                )}
-           
+               <ListarProdutos produtos={lista} />
         </>
     )
 }
