@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ListarProdutos from "./ListarProdutos";
 import styles from "../styles/Home.module.css"
+import Login from "./Login";
 export default function Home() {
     const [lista, setLista] = useState([])
 
@@ -17,6 +18,9 @@ export default function Home() {
         }
         receberlistaProdutos()
     }, [])
+    if(lista.length === 0){
+         return <Login/>
+    }
 
     return (
         <>

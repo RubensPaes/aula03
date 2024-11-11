@@ -1,0 +1,16 @@
+.div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+    width: 330px;
+    height: 330px
+}
+
+.h1{
+   color: black;
+    text-align: center; 
+    margin: 20px 0;
+}
