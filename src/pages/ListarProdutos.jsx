@@ -7,7 +7,7 @@ export default function ListarProdutos({ produtos }) {
                 {produtos.map(produto => (
                     <li key={produto.id} className={styles.card}>
                         <img src={produto.image} alt={produto.title} />
-                        <h2>{produto.title}</h2>
+                        <p>{produto.title}</p>
                         <p>{produto.price}</p>
                         <p>{produto.description}</p>
                     </li>

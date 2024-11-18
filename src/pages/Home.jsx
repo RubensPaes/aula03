@@ -22,9 +22,46 @@ export default function Home() {
          return <Login/>
     }
 
+    const orderAz = () =>{
+        const listaAux = [...lista].sort((a,b)=> a.title.localeCompare(b.title))
+        setLista(listaAux)
+    }
+
+    const orderZa = () =>{
+        const listaB = [...lista].sort((a,b)=> b.title.localeCompare(a.title))
+        setLista(listaB)
+    }
+
+    const precoM = ()=>{
+        const listaP = [...lista].sort((a,b)=> {
+            if(a.price >= b.price){
+              return  1
+            } else{
+                return -1
+            }
+        })
+        setLista(listaP)
+    }
+
+    const precoMenor = ()=>{
+        const listaP = [...lista].sort((a,b)=> {
+            if(a.price >= b.price){
+              return  -1
+            } else{
+                return 1
+            }
+        })
+        setLista(listaP)
+    }
+
+
     return (
         <>
             <h1 className={styles.h1} >Listao de produtos</h1>
+            <button onClick={()=> orderAz()}>Az</button>
+            <button onClick={()=> orderZa()}>Za</button>
+            <button onClick={()=> precoM()}>ValorMenor</button>
+            <button onClick={()=> precoMenor()}>ValorMaior</button>
        
                <ListarProdutos produtos={lista} />
         </>
